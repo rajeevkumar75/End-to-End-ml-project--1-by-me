@@ -28,7 +28,7 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["writing_score", "reading_score"]
+            numerical_columns = ["writing score", "reading score"]
             categorical_columns = [
                 "gender",
                 "race/ethnicity",
@@ -37,7 +37,7 @@ class DataTransformation:
                 "test preparation course",
             ]
 
-            num_pipeline= Pipeline(
+            num_pipeline=Pipeline(
                 steps=[
                 ("imputer",SimpleImputer(strategy="median")),
                 ("scaler",StandardScaler())
